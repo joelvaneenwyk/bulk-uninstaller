@@ -1,0 +1,6 @@
+# Custom Dictionary Words
+Automatizer
+Inno
+Kloc
+resx
+Szeniak
