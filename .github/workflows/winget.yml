@@ -1,7 +1,13 @@
+#
+# Espanso - WinGet Workflow
+#
+
 name: Publish to WinGet
+
 on:
   release:
     types: [released]
+
 jobs:
   publish:
     runs-on: windows-latest
@@ -13,6 +19,7 @@ jobs:
           $VERSION = '${{ github.event.release.tag_name }}'.Replace('v', $Null) + '.0.0'
           echo "::set-output name=version::$VERSION"
         shell: pwsh
+
       - uses: vedantmgoyal2009/winget-releaser@v2
         with:
           identifier: Klocman.BulkCrapUninstaller

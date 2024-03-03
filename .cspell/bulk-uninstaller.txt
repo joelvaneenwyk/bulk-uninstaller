@@ -1,7 +1,10 @@
 # Custom Dictionary Words
 Automatizer
+codeql
+Espanso
 Inno
 Kloc
 Klocman
 resx
 Szeniak
+vedantmgoyal

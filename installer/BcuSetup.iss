@@ -33,7 +33,7 @@ SetupIconFile=logo.ico
 
 AllowNoIcons=yes
 DisableDirPage=no
-LicenseFile={#InputDir}\Licence.txt
+LicenseFile={#InputDir}\LICENSE
 OutputBaseFilename={#MyAppNameShort}_{#MyAppVersionShort}_setup
 
 Compression=lzma2/ultra
@@ -95,11 +95,11 @@ Source: "{#InputDir}\win-x86\CleanLogs.bat";    DestDir: "{app}\win-x86"; Compon
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "{cm:LaunchProgram,{#StringChange(MyAppName, '&', '&&')}}"; Flags: nowait postinstall skipifsilent shellexec
 
-[CustomMessages] 
+[CustomMessages]
 en.MainFiles=Main Files
 pl.MainFiles=Główne pliki
 fr.MainFiles=Principaux fichiers
-de.MainFiles=Haupt Dateien 
+de.MainFiles=Haupt Dateien
 hu.MainFiles=Fő fájlok
 sl.MainFiles=Glavne datoteke
 nl.MainFiles=Hoofdbestanden
@@ -111,7 +111,7 @@ it.MainFiles=File programma
 en.ExtraLanguages=Extra Languages
 pl.ExtraLanguages=Dodatkowe języki
 fr.ExtraLanguages=Langues supplémentaires
-de.ExtraLanguages=Zusätzliche Sprachen 
+de.ExtraLanguages=Zusätzliche Sprachen
 hu.ExtraLanguages=Extra nyelvek
 sl.ExtraLanguages=Dodatni jeziki
 nl.ExtraLanguages=Extra talen

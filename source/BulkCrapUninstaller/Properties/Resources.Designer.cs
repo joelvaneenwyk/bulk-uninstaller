@@ -10,8 +10,8 @@
 
 namespace BulkCrapUninstaller.Properties {
     using System;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,15 +23,15 @@ namespace BulkCrapUninstaller.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
         internal Resources() {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
@@ -45,7 +45,7 @@ namespace BulkCrapUninstaller.Properties {
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
@@ -59,7 +59,7 @@ namespace BulkCrapUninstaller.Properties {
                 resourceCulture = value;
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -69,7 +69,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -79,7 +79,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -89,7 +89,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -99,7 +99,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -109,7 +109,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -119,7 +119,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -129,7 +129,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -139,7 +139,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -149,7 +149,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -159,7 +159,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to http://klocmansoftware.weebly.com/feedback--contact.html.
         /// </summary>
@@ -168,7 +168,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("ContactUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -178,7 +178,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -188,7 +188,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Default.bcul.
         /// </summary>
@@ -197,7 +197,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("DefaultUninstallListFilename", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -207,7 +207,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -217,7 +217,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -227,7 +227,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to http://klocmansoftware.weebly.com/donate.html.
         /// </summary>
@@ -236,7 +236,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("DonateLink", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -246,7 +246,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -256,7 +256,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -266,7 +266,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -276,7 +276,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to https://github.com/Klocman/Bulk-Crap-Uninstaller/issues.
         /// </summary>
@@ -285,7 +285,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("GithubIssuesLink", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to https://github.com/Klocman/Bulk-Crap-Uninstaller.
         /// </summary>
@@ -294,7 +294,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("GithubLink", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to https://github.com/Klocman/Bulk-Crap-Uninstaller/issues/new.
         /// </summary>
@@ -303,7 +303,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("GithubNewIssueLink", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to https://github.com/Klocman/Bulk-Crap-Uninstaller/releases.
         /// </summary>
@@ -312,7 +312,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("GithubReleasesLink", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to BCU_manual.html.
         /// </summary>
@@ -321,7 +321,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("HelpFilename", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to https://www.bcuninstaller.com/.
         /// </summary>
@@ -330,7 +330,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("HomepageUrl", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
@@ -340,7 +340,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -350,7 +350,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -360,7 +360,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -370,7 +370,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -380,7 +380,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -390,7 +390,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -400,7 +400,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -410,16 +410,16 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
-        ///   Looks up a localized string similar to Licence.txt.
+        ///   Looks up a localized string similar to LICENSE.
         /// </summary>
         internal static string LicenceFilename {
             get {
                 return ResourceManager.GetString("LicenceFilename", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -429,7 +429,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -439,7 +439,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -449,7 +449,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -459,7 +459,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -469,7 +469,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -479,7 +479,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -489,7 +489,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -499,7 +499,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -509,7 +509,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to PrivacyPolicy.txt.
         /// </summary>
@@ -518,7 +518,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("PrivacyPolicyFilename", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -528,7 +528,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -538,7 +538,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -548,7 +548,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -558,7 +558,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -568,7 +568,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -578,7 +578,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to https://www.fosshub.com/Bulk-Crap-Uninstaller.html.
         /// </summary>
@@ -587,7 +587,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("ReviewLink", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -597,7 +597,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -607,7 +607,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -617,7 +617,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -627,7 +627,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to http://klocmansoftware.weebly.com/feedback--contact.html.
         /// </summary>
@@ -636,7 +636,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("SubmitFeedbackLink", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -646,7 +646,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -656,7 +656,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -666,7 +666,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to https://github.com/Klocman/Bulk-Crap-Uninstaller/blob/master/CONTRIBUTING.md.
         /// </summary>
@@ -675,7 +675,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("TranslateLink", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to https://twitter.com/intent/tweet?text=Check+out+this+cool+uninstaller+that+I+found!+sourceforge.net/projects/bulk-crap-uninstaller/.
         /// </summary>
@@ -684,7 +684,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ResourceManager.GetString("TwitterLink", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
@@ -694,7 +694,7 @@ namespace BulkCrapUninstaller.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>

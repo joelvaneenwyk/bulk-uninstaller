@@ -3,8 +3,10 @@
     Apache License Version 2.0
 */
 
+using Klocman.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Text.Json;
 
@@ -16,6 +18,7 @@ namespace BulkCrapUninstaller.Functions.Ratings
         private readonly Dictionary<ulong, int> _avgRatings = new();
         private readonly Dictionary<ulong, int> _myRatings = new();
 
+        public IDictionary<ulong, int> Items => _myRatings.AsReadOnly();
 
         public UninstallerRatingManager(ulong userId)
         {

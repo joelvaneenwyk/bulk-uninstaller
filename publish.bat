@@ -1,13 +1,20 @@
 @echo off
-setlocal EnableExtensions]
+setlocal EnableDelayedExpansion
+    cd /d "%~dp0"
+
     :: Configuration is either 'Release' or 'Debug'
     set "config=Release"
     set "msbuild=D:\Applications\VS2022\MSBuild\Current\Bin\amd64\MSBuild.exe"
-    set "publish=%CD%\bin\publish"
+    if not exist "!msbuild!" set "msbuild=C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe"
+    if not exist "!msbuild!" set "msbuild=C:\Program Files\Microsoft Visual Studio\2022\Community\Msbuild\Current\Bin\MSBuild.exe"
+    if not exist "!msbuild!" set "msbuild=C:\Program Files\Microsoft Visual Studio\2022\Community\Msbuild\Current\Bin\amd64\MSBuild.exe"
+    if not exist "!msbuild!" set "msbuild=C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\MSBuild.exe"
+    if not exist "!msbuild!" set "msbuild=C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\amd64\MSBuild.exe"
+    set "publish=%~dp0bin\publish"
 
-    rmdir /q /s "%publish%"
+    if exist "%publish%" rmdir /q /s "%publish%"
     if errorlevel 1 (pause)
-    rmdir /q /s "%~dp0bin\launcher"
+    if exist "%~dp0bin\launcher" rmdir /q /s "%~dp0bin\launcher"
     if errorlevel 1 (pause)
 
     set "platform=x64"
@@ -18,7 +25,7 @@ setlocal EnableExtensions]
 
     copy "%~dp0bin\launcher\BCU-launcher.exe" "%publish%\BCUninstaller.exe"
     copy "%target%\BCU_manual.html" "%publish%\BCU_manual.html"
-    copy "%target%\Licence.txt" "%publish%\Licence.txt"
+    copy "%target%\LICENSE" "%publish%\LICENSE"
     copy "%target%\PrivacyPolicy.txt" "%publish%\PrivacyPolicy.txt"
 
     rmdir /q /s "%~dp0bin\launcher"
@@ -31,9 +38,9 @@ exit /b 0
 :publish
     setlocal
     set "identifier=win-%platform%"
-    set "target=%CD%\bin\publish\%identifier%"
+    set "target=%~dp0bin\publish\%identifier%"
 
-    "%msbuild%" "source\BulkCrapUninstaller.sln" ^
+    "%msbuild%" "%~dp0source\BulkCrapUninstaller.sln" ^
         /m /p:filealignment=512 ^
         /t:Restore;Rebuild ^
         /p:DeployOnBuild=true ^
@@ -49,7 +56,7 @@ exit /b 0
         /p:PublishTrimmed=False ^
         /verbosity:minimal
 
-    "%msbuild%" "source\BulkCrapUninstaller.sln" ^
+    "%msbuild%" "%~dp0source\BulkCrapUninstaller.sln" ^
         /m /p:filealignment=512 ^
         /t:Publish ^
         /p:DeployOnBuild=true ^
