@@ -1,4 +1,3 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33424.131
@@ -21,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UninstallTools", "Uninstall
 		{DCA3F6AD-0A1A-4E14-894A-114CC9B3B3E5} = {DCA3F6AD-0A1A-4E14-894A-114CC9B3B3E5}
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CF548671-BB38-48B1-9664-C737E971FC07}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "{root}", "{root}", "{CF548671-BB38-48B1-9664-C737E971FC07}"
 	ProjectSection(SolutionItems) = preProject
 		..\.gitignore = ..\.gitignore
 		..\CODE_OF_CONDUCT.md = ..\CODE_OF_CONDUCT.md
@@ -87,7 +86,22 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NBug", "NBug_custom\NBug.cs
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BCU-launcher", "BCU-launcher\BCU-launcher.vcxproj", "{C54B5AFD-C079-4852-960E-906B8CEE0E07}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{28FA5638-BFE6-43C4-8C22-088958D3B373}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\winget-manifest.yaml = ..\.github\winget-manifest.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{7A74B889-97B5-49C4-AD4E-4B0A4D084BBE}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\codeql.yml = ..\.github\workflows\codeql.yml
+		..\.github\workflows\winget.yml = ..\.github\workflows\winget.yml
+	EndProjectSection
+EndProject
 Global
+	GlobalSection(NestedProjects) = preSolution
+		{28FA5638-BFE6-43C4-8C22-088958D3B373} = {CF548671-BB38-48B1-9664-C737E971FC07}
+		{7A74B889-97B5-49C4-AD4E-4B0A4D084BBE} = {28FA5638-BFE6-43C4-8C22-088958D3B373}
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
