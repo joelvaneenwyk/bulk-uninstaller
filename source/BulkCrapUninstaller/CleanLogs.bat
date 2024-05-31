@@ -2,11 +2,11 @@ title Removing BCU log files...
 @echo off
 cls
 
-if not exist %LOCALAPPDATA% (
+if not exist "%LOCALAPPDATA%" (
 REM LOCALAPPDATA doesn't exist on windows older than Vista
-set APPDATASAFE=%APPDATA%
+set "APPDATASAFE=%APPDATA%"
 ) else (
-set APPDATASAFE=%LOCALAPPDATA%
+set "APPDATASAFE=%LOCALAPPDATA%"
 )
 
 REM Wait for BCU to exit so the logs are written

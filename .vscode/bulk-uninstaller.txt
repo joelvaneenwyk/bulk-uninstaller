@@ -1,0 +1,11 @@
+# Custom Dictionary Words
+Automatizer
+codeql
+Espanso
+Inno
+Kloc
+Klocman
+msbuild
+resx
+Szeniak
+vedantmgoyal
