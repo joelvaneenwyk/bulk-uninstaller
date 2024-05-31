@@ -21,6 +21,11 @@ jobs:
       contents: read
       security-events: write
 
+    env:
+      Solution_Name: source/BulkCrapUninstaller.sln
+      Test_Project_Path: source/BulkCrapUninstallerTests/BulkCrapUninstallerTests.csproj
+
+    steps:
     runs-on: "windows-latest"
     timeout-minutes: 120
     name: Analyze
