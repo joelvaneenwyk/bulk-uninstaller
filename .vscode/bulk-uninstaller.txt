@@ -5,6 +5,7 @@ Espanso
 Inno
 Kloc
 Klocman
+msbuild
 resx
 Szeniak
 vedantmgoyal
