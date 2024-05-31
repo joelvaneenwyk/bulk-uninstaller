@@ -1,0 +1,56 @@
+---
+---
+
+
+
+@import "{{ site.theme }}";
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.page-header {
+    color: #fff;
+    text-align: center;
+    background-color: #333333;
+    background-image: linear-gradient(180deg, #555555, #333333);
+    padding: 2.3rem 1rem;
+}
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: #333333;
+}
+
+.download-color {
+    color: rgba(255,255,255,1);
+    background-color: rgba(0,255,0,0.4);
+    &:hover {
+        background-color: rgba(0,255,0,0.7);
+    }
+}
+
+.shields {
+    margin-top: 1.2rem;
+    margi-bottom: 0rem;
+    text-align: center;
+}
+.shields a {
+    margin-right: 0.5rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    &:hover {
+      opacity: 1;
+    }
+}
