@@ -152,8 +152,8 @@
 		<ProjectReference Include="..\UninstallTools\UninstallTools.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-		<Content Include="..\..\Licence.txt">
-			<Link>Licence.txt</Link>
+		<Content Include="..\..\LICENSE">
+			<Link>LICENSE</Link>
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</Content>
 		<Content Include="..\..\doc\BCU_manual.html">
