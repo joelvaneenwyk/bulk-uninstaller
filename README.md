@@ -29,8 +29,9 @@ You might need to download [this](https://github.com/Klocman/UpdateSystem) and [
 
 ## Screenshots
 
-![preview](../gh-pages/assets/1.png)
-![preview](../gh-pages/assets/4.png)
+![Bulk Crap Uninstaller window showing many elements of interface](./doc/site/assets/1.png)
+
+![Leftover removal dialog showing options available after uninstall](./doc/site/assets/4.png)
 
 ## Alternatives
 
