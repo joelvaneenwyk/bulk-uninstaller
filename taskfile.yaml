@@ -6,8 +6,10 @@ version: "3"
 vars:
   BUILD_DIR_NAME: >-
     .build
+  OUTPUT_BIN_PATH: >-
+    bin/Release/net6.0-windows10.0.18362.0/win-x64
   OUTPUT_EXE_PATH: >-
-    build/bin/Release64/BulkUninstaller.exe
+    bin/Release/net6.0-windows10.0.18362.0/win-x64/BCUninstaller.exe
 
 tasks:
   default:
@@ -42,16 +44,24 @@ tasks:
       - task: build
 
   run:
-    deps: [cmake-install]
+    deps: [build]
     cmds:
-      - cmd: >-
-          cmd.exe /D /E:ON /C \
-            start "open-shell-menu" /D "{{joinPath .TASKFILE_DIR "bin"}}" "{{joinPath .TASKFILE_DIR .OUTPUT_EXE_PATH}}"
+      - cmd: |
+          executable="{{joinPath .TASKFILE_DIR .OUTPUT_EXE_PATH | fromSlash}}"
+          if [ -f "$executable" ]; then
+            cd "$(dirname "$executable")"
+            printf "##[cmd] %s\n" "$executable"
+            sudo "$executable"
+          else
+            printf "Executable not found: '%s'\n" "{{joinPath .TASKFILE_DIR .OUTPUT_EXE_PATH | fromSlash}}"
+          fi
 
   build:
     deps: [git-submodule-init]
     aliases: [msbuild, b, bld]
     silent: true
+    status:
+      - test -f "{{joinPath .TASKFILE_DIR .OUTPUT_EXE_PATH | fromSlash}}"
     cmds:
       - cmd: echo "Building '{{ .MSBUILD_SOLUTION }}' with '{{ .MSBUILD_CONFIG }}' configuration."
       - cmd: >-
