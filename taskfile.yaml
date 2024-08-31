@@ -1,0 +1,135 @@
+# yaml-language-server: $schema=https://taskfile.dev/schema.json
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  BUILD_DIR_NAME: >-
+    .build
+  OUTPUT_EXE_PATH: >-
+    build/bin/Release64/BulkUninstaller.exe
+
+tasks:
+  default:
+    cmds:
+      - task: build
+
+  clean:
+    silent: true
+    cmds:
+      - cmd: git add .
+        ignore_error: true
+      - cmd: cmd /c rmdir /s /q "{{joinPath .TASKFILE_DIR .BUILD_DIR_NAME}}"
+        ignore_error: true
+      - cmd: cmd /c rmdir /s /q "{{joinPath .TASKFILE_DIR ".vs"}}"
+        ignore_error: true
+      - cmd: cmd /c rmdir /s /q "{{joinPath .TASKFILE_DIR "packages"}}"
+        ignore_error: true
+      - task: git-clean
+
+  git-clean:
+    vars:
+      CLOSE_STDIN: '{{if eq OS "windows"}}<nul{{else}}0<&-{{end}}'
+    cmds:
+      - cmd: git add .
+      - cmd: git clean -xfd {{.CLOSE_STDIN}}
+        silent: true
+        ignore_error: true
+
+  rebuild:
+    cmds:
+      - task: clean
+      - task: build
+
+  run:
+    deps: [cmake-install]
+    cmds:
+      - cmd: >-
+          cmd.exe /D /E:ON /C \
+            start "open-shell-menu" /D "{{joinPath .TASKFILE_DIR "bin"}}" "{{joinPath .TASKFILE_DIR .OUTPUT_EXE_PATH}}"
+
+  build:
+    deps: [git-submodule-init]
+    aliases: [msbuild, b, bld]
+    silent: true
+    cmds:
+      - cmd: echo "Building '{{ .MSBUILD_SOLUTION }}' with '{{ .MSBUILD_CONFIG }}' configuration."
+      - cmd: >-
+          nuget restore "{{fromSlash .MSBUILD_SOLUTION}}"
+      - cmd: >-
+          "{{fromSlash .MSBUILD}}"
+          /m
+          /t:Restore,Build
+          /p:Configuration="{{.MSBUILD_CONFIG}}"
+          /p:Platform="{{.MSBUILD_PLATFORM}}"
+          "{{fromSlash .MSBUILD_SOLUTION}}"
+    vars:
+      SOLUTIONS: |
+        source/BulkCrapUninstaller.sln
+      DEFAULT_CONFIG: Release
+      DEFAULT_PLATFORM: x64
+      DEFAULT_SOLUTION: "{{index (splitLines .SOLUTIONS) 0}}"
+      MSBUILD_CONFIG: "{{ .CONFIG | default .DEFAULT_CONFIG }}"
+      MSBUILD_SOLUTION: "{{ joinPath .TASKFILE_DIR (.SOLUTION | default .DEFAULT_SOLUTION) }}"
+      MSBUILD_PLATFORM: "{{ .PLATFORM | default .DEFAULT_PLATFORM }}"
+      MSBUILD:
+        sh: | # shell
+          strings=("Preview" "Enterprise" "Professional" "Community")
+          for str in "${strings[@]}"
+          do
+            result="C:/Program Files/Microsoft Visual Studio/2022/${str}/MSBuild/Current/Bin/amd64/MSBuild.exe"
+            if [ -e "$result" ]; then
+              echo "$result"
+              break
+            fi
+          done
+
+  git-submodule-init:
+    sources:
+      - .gitmodules
+    cmds:
+      - cmd: |
+          if [ -f "{{joinPath .TASKFILE_DIR ".gitmodules"}}" ]; then
+            git -C "{{.TASKFILE_DIR}}" submodule update --init --recursive
+          fi
+
+  clang-format:
+    aliases: [fmt, format]
+    sources:
+      - src/**/*.c
+      - src/**/*.h
+    cmds:
+      - for: sources
+        cmd: |
+          clang-format -i "{{joinPath .TASKFILE_DIR .ITEM}}"
+
+  tidy:
+    sources:
+      - src/**/*.c
+      - src/**/*.h
+    cmds:
+      - for: sources
+        task: clang-tidy
+        vars: { CLANG_TIDY_SOURCE: "{{.ITEM}}" }
+
+  clang-tidy:
+    requires:
+      vars: [CLANG_TIDY_SOURCE]
+    vars:
+      CLANG_TIDY_OUT_FILE: '.build/{{splitList "/" (toSlash .CLANG_TIDY_SOURCE) | last}}.out'
+    sources:
+      - "{{.CLANG_TIDY_SOURCE}}"
+    generates:
+      - "{{.CLANG_TIDY_OUT_FILE}}"
+    cmds:
+      - cmd: mkdir "{{joinPath .TASKFILE_DIR ".build"}}"
+        silent: true
+        ignore_error: true
+      - cmd: |
+          clang-tidy "{{joinPath .TASKFILE_DIR .CLANG_TIDY_SOURCE}}" \
+            --config-file="{{joinPath .TASKFILE_DIR ".clang-tidy"}}" \
+            --use-color \
+            --fix \
+            --fix-notes \
+            --fix-errors \
+          > "{{joinPath .TASKFILE_DIR .CLANG_TIDY_OUT_FILE | fromSlash}}"
