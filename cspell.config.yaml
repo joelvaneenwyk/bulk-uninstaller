@@ -2,7 +2,7 @@ version: "0.2"
 ignorePaths: []
 dictionaryDefinitions:
   - name: bulk-uninstaller
-    path: ./.vscode/bulk-uninstaller.txt
+    path: ./.github/config/bulk-uninstaller.dict
     addWords: true
 dictionaries:
   - bulk-uninstaller

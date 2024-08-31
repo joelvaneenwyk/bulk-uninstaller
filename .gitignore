@@ -224,3 +224,6 @@ _Pvt_Extensions
 # Misc
 *.odt#
 *.DotSettings
+
+.git/
+.task/
